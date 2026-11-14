@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-cream font-sans text-ink antialiased; }
+::selection { background: #cfe6fb; color: #24415f; }
+:focus-visible { outline: 3px solid #4f8fd0; outline-offset: 2px; }
+
+@keyframes pop-in { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+.pop-in { animation: pop-in .25s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
